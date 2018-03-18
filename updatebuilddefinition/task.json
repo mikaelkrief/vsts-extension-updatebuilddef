@@ -1,0 +1,45 @@
+{
+   "id": "67595541-57ba-4d20-8b82-f369571f8f49",
+   "name": "updatebuilddefinition",
+   "friendlyName": "Update Build Definition",
+   "description": "Update Build Definition from Json files",
+   "helpMarkDown": "v 0.1.17",
+   "category": "Utility",
+   "visibility": ["Build","Release"],
+   "author": "",
+   "version": {
+      "Major": 0,
+      "Minor": 1,
+      "Patch": 17
+   },
+   "demands": [],
+   "inputs": [
+      {
+         "name": "jsonfile",
+         "type": "filePath",
+         "label": "Path to Json file",
+         "defaultValue": "",
+         "required": true
+      },
+      {
+         "name": "definitionid",
+         "type": "string",
+         "label": "Definition Id",
+         "defaultValue": "",
+         "required": false,
+         "helpMarkDown": "Definition Id to update"
+      },
+      {
+         "name": "tfsurl",
+         "type": "string",
+         "label": "TFS Url",
+         "defaultValue": "",
+         "required": false,
+         "helpMarkDown": "TFS Url"
+      }
+   ],
+   "instanceNameFormat": "updatebuilddefinition",
+   "execution":
+    {"PowerShell3":{"target":"$(currentDirectory)\\updatebuilddefinition.ps1","argumentFormat":"","workingDirectory":"$(currentDirectory)"}}
+   
+}
